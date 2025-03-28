@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+--a:0;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+
+.left {
+    width: 20vw;
+    padding: 10px;
+}
+.close{
+    display: none;
+}
+
+.right {
+    width: 80vw;
+}
+
+.home ul li {
+    width: 14px;
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    padding-top: 18px;
+    padding: 18px;
+   
+    font-weight: bold;
+}
+.cl{
+    font-size: 17px;
+    
+}
+.cla{
+    display: flex;
+    align-items: space-between;
+    color: #b3b3b3;
+    font-size: 17px;
+}
+.fle{
+    display: flex;
+    position: absolute;
+   right: 20px;
+   color: #757373;
+  
+
+}
+.heading{
+    display: flex;
+    gap: 14px;
+    width: 100%;
+    padding-top: 14px;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    
+   
+}
+.heading img{
+    width: 20px;
+    
+}
+.library{
+    min-height: 80vh;
+    position: relative;
+    
+}
+.footer{
+    display: flex;
+    font-size: 10px;
+    color: grey;
+    gap:10px;
+    position: static;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+.footer a{
+    color: grey;
+    font-size: 14px;
+    
+}
+.right{
+    margin: 16px 0;/*it gives the space from the top */ 
+    position: relative;
+} 
+
+.header{
+    display: flex; /*it makes the the login and sign up go up */ 
+    justify-content: space-between;/*it makes the the login and sign up go up goes in the last of the page */ 
+    background-color: rgb(19,19,19);
+
+
+}
+.header >*{  /* >*  it denotes the direct elements in the header  */ 
+    padding: 20px;
+  
+}
+.spotifyPlaylists{
+
+    padding: 16px;
+    margin-top: -36px;
+    position: relative;
+    right: 20px;
+    
+    
+}
+.next{
+    position: relative;
+    right: -27px;
+}
+
+.cardContainer{
+    margin: 30px;
+    display: flex; /*compensate the width 100% */
+    gap:10px;
+    flex-wrap: wrap;
+    /*overflow: scroll;
+    max-width: 70vh;*/
+
+}
+.card{
+    width:200px; /*  for marking the card all the card style were used */
+    padding: 6px;
+    height: 310px;
+    border-radius: 5px;
+    background-color:  #252525;
+    position: relative;
+    transition: all 0.01s;
+    
+}
+.card > *{
+    padding-top: 10px;
+}
+.card:hover{
+    background-color: rgb(105, 103, 103);
+    cursor: pointer;
+    --a:2;
+}
+.card img{
+    
+    width: 180px;
+    border-radius: 150px; /*  to make the artist and pritam come under card  */
+    object-fit: contain;
+    
+    
+}
+.play{
+    width:48px;
+    height: 48px;
+    background-color: #50cf50;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;/*using position absolute and relative and top bootom left right adjusting we make one img or text above another text   */
+    top:168px;
+    right: 17px;
+    opacity: var(--a);/*for playcard transition root ,card hover used used*/ 
+    transition: all 3s  1s;
+   
+    
+}
+.button >*{
+ margin: 0 12px;
+
+}
+.signupbtn{
+   background-color:#252525;
+   color: rgb(239, 237, 237);
+   font-weight: bold;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-size: 16px;
+
+}
+.signupbtn:hover{
+    font-size: 17px;
+    color: white;
+}
+.loginbtn{
+    background-color: white;
+    border-radius:31px;
+    font-weight: bolder;
+    
+    padding: 8px;
+    width: 100px;
+    height: 53px;
+    cursor: pointer;
+    color: black;
+    border: none;
+}
+.loginbtn:hover{
+    font-weight: bold;/* hover is used for changes while clicking*/
+    width: 80px;
+    padding: 11px;
+    font-size: 17px;
+
+}
+.playbar{
+    position:fixed;/* we do this sticky it go just below the pritam photo,if absolute it position will be bottom but will chnge and if fixed it will get stuck at the bottom */
+    bottom: 25px;
+    background-color: rgb(44, 42, 42);
+    
+    padding: 8px;
+    border-radius: 20px;
+    width: 72vw;
+    height: 28px;
+    min-height: 40px;
+}
+.songbutton{
+    display: flex;
+    gap: 12px;
+   justify-content: center;
+}
+.songlist{
+    height: 610px;
+    overflow-x: auto;
+    
+    margin-bottom: 44px;
+    
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgercont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    
+}
+.songlist ul{
+    padding: 0 12px;
+}
+.songlist ul li{
+    list-style-type:decimal;
+    display: flex;
+    gap: 14px;
+    padding:12px 0;
+   border: 1px solid white;
+   width: 274px;
+   height: auto;
+   margin: 12px 0;
+   padding: 8px;
+   border-radius: 10px;
+   justify-content: space-between;
+    cursor: pointer;
+}
+.songlist .info{
+    font-size: 15px;
+    width: 344px;
+}
+.timeinfo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.volume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    
+}
+.range input{
+    cursor: pointer;
+}
+
+.songinfo {
+    color:white;
+    top: 12px;
+    width: 250px;
+}
+.songtime{
+    width: 125px;
+    color:white;
+    top: 12px;
+    
+}
+.info div{
+    word-break: break-all;
+}
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.playnow span{
+    font-size: 16px;
+    width: 64px;
+    padding:12px ;
+}
+
+.seekbar{
+    height:2px;
+    width:98%;
+    background:white;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 4px;
+    margin: 7px;
+    cursor: pointer;
+ 
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 13px;
+    background-color: rgb(234, 229, 229);
+    position: relative;
+    bottom: 4px;
+    left: 0%;
+    transition: left 0.5s;/* do the change in element part using % */
+
+}
+
+.songbutton img{
+    cursor: pointer;
+}
+
+
+.songbutton{
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+@media (max-width:1200px) {
+    .left{
+        padding: 0;
+        position: absolute;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 370px;
+        background-color: black;
+    }
+    .left .closeimg{
+       
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+
+    }
+    .timeinfo{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 13px;
+    }
+    .songinfo,.songtime{
+        width: auto;
+    }
+    .close{
+        display: block;
+        
+        
+    }
+    .right{
+        width: 100vw;
+        margin: 0;
+    }
+    .playbar{
+        width: calc(100vw-105px);
+
+    }
+    .seekbar{
+        width:calc(100vw-120px);
+    }
+    .hamburger{
+        display: block;
+    }
+    .card{
+        width: 44vw;
+    }
+    .cardContainer{
+        margin: 0;
+        
+        justify-content: center;
+    }
+   .abovebar{
+    flex-direction: column;
+
+    gap: 23px;
+    align-items: center;
+   }
+}
+@media (max-width:400px){
+    .card{
+
+    
+    width: 44vw;
+} 
+}
